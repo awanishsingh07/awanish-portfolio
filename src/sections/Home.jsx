@@ -172,10 +172,9 @@ const Home = React.forwardRef((props, ref) => {
                 View My Work
               </a>
               <a
-                href="/Resume.pdf"
-                download="Awanish_Singh_Resume.pdf"
+                href="/Awanish_Singh_Resume.pdf"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
                 className="px-6 py-3 rounded-full text-lg font-medium text-black bg-white 
                 hover:bg-gray-200 shadow-lg hover:scale-105 transition-all"
               >
