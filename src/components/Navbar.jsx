@@ -22,7 +22,7 @@ export default function Navbar() {
           setForceVisible(false);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (homeSection) observer.observe(homeSection);
@@ -74,10 +74,28 @@ export default function Navbar() {
         }`}
       >
         {/* Logo */}
-        <div className="flex items-center space-x-2">
+        {/* <div className="flex items-center space-x-2">
           <img src={Logo} alt="Logo" className="w-8 h-8" />
           <div className="text-2xl font-bold text-white hidden sm:block">
             Awanish
+          </div>
+        </div> */}
+
+        {/* Availability Status */}
+        <div className="flex items-center gap-3">
+          {/* Logo always visible */}
+          <img src={Logo} alt="Logo" className="w-8 h-8" />
+
+          {/* Hide badge on mobile */}
+          <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/10 backdrop-blur-md">
+            <div className="relative">
+              <div className="w-2 h-2 rounded-full bg-green-500"></div>
+              <div className="absolute inset-0 w-2 h-2 rounded-full bg-green-500 animate-ping"></div>
+            </div>
+
+            <span className="text-white text-xs font-small hidden sm:block">
+              Open for Opportunities
+            </span>
           </div>
         </div>
 

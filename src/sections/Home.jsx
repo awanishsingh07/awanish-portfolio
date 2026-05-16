@@ -116,6 +116,20 @@ const Home = React.forwardRef((props, ref) => {
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
           <div className="w-full lg:pr-24 mx-auto max-w-[48rem]">
+            {/* Mobile only Availability Status */}
+            <div className="flex justify-center mb-4 sm:hidden">
+              <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/10 backdrop-blur-md">
+                <div className="relative">
+                  <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                  <div className="absolute inset-0 w-2 h-2 rounded-full bg-green-500 animate-ping"></div>
+                </div>
+
+                <span className="text-white text-xs font-medium">
+                  Open for Opportunities
+                </span>
+              </div>
+            </div>
+
             {/* typing text */}
             <motion.div
               className="mb-3 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-white tracking-wide min-h-[1.6em]"
